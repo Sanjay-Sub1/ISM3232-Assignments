@@ -15,6 +15,9 @@ let employeeName = "Stanley Pines";
 const employeeID = 12345;
 var isActive = true;
 
+let products = ["Intake", "Exhaust","Downpipe"];
+const productDetails = [name, price, inStock];
+
 console.log(employeeName);
 console.log(typeof employeeName);
 
@@ -23,3 +26,6 @@ console.log(typeof employeeID);
 
 console.log(isActive);
 console.log(typeof isActive);
+
+console.log(products);
+console.log(productDetails);
