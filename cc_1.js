@@ -20,8 +20,11 @@ const productDetails = {name: "Tune", price: 700, inStock: true};
 
 let accountBalance = 500;
 
-let employeeScore1 = 14
-let employeeScore2 = 18
+let employeeScore1 = 14;
+let employeeScore2 = 18;
+
+let hasKeyCard = false;
+let hasPermission = true;
 
 console.log(employeeName);
 console.log(typeof employeeName);
@@ -46,9 +49,13 @@ console.log(accountBalance);
 accountBalance %= 30;
 console.log(accountBalance);
 
-console.log(employeeScore1 > employeeScore2)
-console.log(employeeScore1 < employeeScore2)
-console.log(employeeScore1 >= employeeScore2)
-console.log(employeeScore1 <= employeeScore2)
-console.log(employeeScore1 == employeeScore2)
-console.log(employeeScore1 !== employeeScore2)
+console.log(employeeScore1 > employeeScore2);
+console.log(employeeScore1 < employeeScore2);
+console.log(employeeScore1 >= employeeScore2);
+console.log(employeeScore1 <= employeeScore2);
+console.log(employeeScore1 == employeeScore2);
+console.log(employeeScore1 !== employeeScore2);
+
+console.log(hasKeyCard && hasPermission);
+console.log(hasKeyCard || hasPermission);
+console.log(!hasKeyCard || hasPermission);
