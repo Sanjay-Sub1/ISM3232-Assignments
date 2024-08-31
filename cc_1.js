@@ -18,6 +18,8 @@ var isActive = true;
 let products = ["Intake", "Exhaust","Downpipe"];
 const productDetails = {name: "Tune", price: 700, inStock: true};
 
+let accountBalance = 500;
+
 console.log(employeeName);
 console.log(typeof employeeName);
 
@@ -29,3 +31,15 @@ console.log(typeof isActive);
 
 console.log(products);
 console.log(productDetails);
+
+accountBalance += 500;
+console.log(accountBalance);
+accountBalance -= 300;
+console.log(accountBalance);
+accountBalance *= 3;
+console.log(accountBalance);
+accountBalance /= 2;
+console.log(accountBalance);
+accountBalance %= 30;
+console.log(accountBalance);
+
