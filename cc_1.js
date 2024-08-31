@@ -16,7 +16,7 @@ const employeeID = 12345;
 var isActive = true;
 
 let products = ["Intake", "Exhaust","Downpipe"];
-const productDetails = [name, price, inStock];
+const productDetails = {name: "Tune", price: 700, inStock: true};
 
 console.log(employeeName);
 console.log(typeof employeeName);
