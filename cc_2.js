@@ -13,5 +13,7 @@
 
 let bill = 300
 var tip = bill*0.2
+let finalBill = tip + bill
 
 console.log(tip)
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${finalBill}`)
