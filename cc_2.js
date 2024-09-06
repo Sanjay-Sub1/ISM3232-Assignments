@@ -15,6 +15,9 @@ let bill = 300;
 var tip = bill*0.2;
 let finalBill = tip + bill;
 
+let billAmounts1 = [275,40,430];
+let billAmounts2 = [125,555,44];
+
 function calculateTip(bill) {
 
 if (50 <= bill <= 300){
@@ -22,7 +25,7 @@ tip = 0.15}
 else if (bill >= 300){
 tip = 0.2}
 else{
-tip = 0}
+tip = 0.2}
 
       return (tip*bill);
     
@@ -33,4 +36,9 @@ console.log(calculateTip(billPrice));
 
 console.log(tip);
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${finalBill}`);
+
+const tips1 = billAmounts1.map(bill => calculateTip(bill));
+const tips2 = billAmounts2.map(bill => calculateTip(bill));
+console.log(tips1);
+console.log(tips2);
 
