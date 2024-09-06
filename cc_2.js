@@ -11,9 +11,26 @@
 </body>
 </html>
 
-let bill = 300
-var tip = bill*0.2
-let finalBill = tip + bill
+let bill = 300;
+var tip = bill*0.2;
+let finalBill = tip + bill;
 
-console.log(tip)
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${finalBill}`)
+function calculateTip(bill) {
+
+if (50 <= bill <= 300){
+tip = 0.15}
+else if (bill >= 300){
+tip = 0.2}
+else{
+tip = 0}
+
+      return (tip*bill);
+    
+    }
+let billPrice = 100;
+console.log(calculateTip(billPrice));
+
+
+console.log(tip);
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${finalBill}`);
+
