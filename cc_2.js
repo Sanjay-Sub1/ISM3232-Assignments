@@ -35,7 +35,6 @@ console.log(calculateTip(billPrice));
 
 
 console.log(tip);
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${finalBill}`);
 
 const tips1 = billAmounts1.map(bill => calculateTip(bill));
 const tips2 = billAmounts2.map(bill => calculateTip(bill));
