@@ -39,6 +39,10 @@ console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${
 
 const tips1 = billAmounts1.map(bill => calculateTip(bill));
 const tips2 = billAmounts2.map(bill => calculateTip(bill));
+const total1 = billAmounts1 + tips1;
+const total2 = billAmounts2 + tips2;
 console.log(tips1);
 console.log(tips2);
+console.log(total1);
+console.log(total2);
 
