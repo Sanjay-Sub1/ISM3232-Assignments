@@ -10,7 +10,7 @@
     <script src="cc_3.js"></script>
 </body>
 </html>
-
+//Function that is used to calculate the average sales of an employee
 function calculateAverageSales(sales){
 
 let salesNumbers = 0;
@@ -23,7 +23,7 @@ averageSales = salesNumbers / sales.length;
 return averageSales;
 
 }
-
+//Function used to determine the performance rating of an employee
 function determinePerformanceRating(salesPerEmployee){
     if (salesPerEmployee > 10000)
     {return "Excellent";}
@@ -36,6 +36,22 @@ function determinePerformanceRating(salesPerEmployee){
 
 }
 
+//Function used to find the top and bottom performers in a data set
+function findTopAndBottomPerformers(salesPerPerson){
+    const salesTotals = salesPerPerson.map(employee => {
+        const totalSalesPerEmployee = employee.salesPerPerson.reduce((sum, sale) => sum + sale, 0);
+        return {Name: employee.name, totalSalesPerEmployee};
+    });
+
+    const maxSalesFigure = Math.max(...salesTotals.map(employee => employee.totalSalesPerEmployee));
+    const minSalesFigure = Math.min(...salesTotals.map(employee => employee.totalSalesPerEmployee));
+
+    const topEmployee = salesTotals.find(employee => employee.totalSalesPerEmployee === maxSalesFigure);
+    const bottomEmployee = salesTotals.find(employee => employee.totalSalesPerEmployee === minSalesFigure);
+
+    return{topEmployee, bottomEmployee};
+
+}
 
 salesFigures = [100,200,300];
 console.log(calculateAverageSales(salesFigures));
