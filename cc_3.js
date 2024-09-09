@@ -71,3 +71,18 @@ console.log(calculateAverageSales(salesFigures));
 
 averageSalesAmount = calculateAverageSales(salesFigures);
 console.log(determinePerformanceRating(averageSalesAmount));
+
+//Sales data used to test the functions
+const salesData = [
+
+      { name: 'Alice', salesPerPerson: [12000, 15000, 13000] },
+    
+      { name: 'Bob', salesPerPerson: [7000, 6000, 7500] },
+    
+     { name: 'Charlie', salesPerPerson: [3000, 4000, 3500] },
+    
+      { name: 'Diana', salesPerPerson: [9000, 8500, 9200] },
+    
+    ];
+
+console.log(generatePerformanceReport(salesData);
