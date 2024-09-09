@@ -53,6 +53,19 @@ function findTopAndBottomPerformers(salesPerPerson){
 
 }
 
+//Function used to generate a report of the Employees and their sales
+function generatePerformanceReport(salesPerEmployees){
+    let report = salesDataOfEmployees.map(employee => {
+        var averageOfEmployee = calculateAverageSales(employee.sales);
+        var performanceRatingOfEmployee = determinePerformanceRating(salesPerEmployee);
+        return{Name: employee.name, averageSalesOfEmployee, performanceRatingOfEmployee};
+    })
+    let bestAndWorst = findTopAndBottomPerformers(salesPerEmployees.map(employee => ({employee.name,employee.sales.reduce(((sum, sale) => sum + sale, 0))}));
+
+    return{report, bestAndWorst.topEmployee, bestAndWorst.bottomEmployee};
+
+}
+
 salesFigures = [100,200,300];
 console.log(calculateAverageSales(salesFigures));
 
