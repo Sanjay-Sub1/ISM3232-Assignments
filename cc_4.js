@@ -40,6 +40,25 @@ function displayProductDetails(products){
     console.log(`Quantity: ${products.quantity}`);
     console.log(`Stock Status: ${stockStatus}`);
 }
+
+//creates a function to update the quantity of the product as well as updating the status of said product
+function updateStock(products,unitsSold){
+//Used to subtract units sold from the original quantity
+    products.quantity = products.quantity - unitsSold;
+//Displays out of stock message if quantity = 0
+    if (products.quantity == 0){
+        console.log(`${products.name} is out of stock`);
+    }
+//Displays low stock message if quantity is below or equal to the low stock level
+    else if (products.quantity <= products.lowStockLevel){
+        console.log(`${products.name} is in low stock`);
+    }
+//Displays in stock message if quantity is above the low stock level
+    else{
+        console.log(`${products.name} is in stock`);
+    }
+}
+
 //creates the variable GPU to pull from the array
 GPU = inventory[0];
 //creates the variable monitor to pull from the array
@@ -48,3 +67,5 @@ monitor = inventory[4];
 displayProductDetails(GPU);
 //runs the function for the variable monitor
 displayProductDetails(monitor);
+//Used to the test the update stock function
+updateStock(inventory[3],65);
