@@ -58,6 +58,18 @@ function updateStock(products,unitsSold){
         console.log(`${products.name} is in stock`);
     }
 }
+//Function to check if an item is in low stock or in stock
+function checkLowStock(stock){
+//Iterates over the array to check if each product is above the lowStockLevel signified in the array
+    for (let i = 0; i < stock.length; i++){
+        if (stock[i].quantity <= stock[i].lowStockLevel){
+            console.log(`${stock[i].name} is low in stock`);
+        }
+        else{
+            console.log(`${stock[i].name} is in stock`);
+        }
+    }
+}
 
 //creates the variable GPU to pull from the array
 GPU = inventory[0];
