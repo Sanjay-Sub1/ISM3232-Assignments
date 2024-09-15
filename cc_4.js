@@ -70,6 +70,15 @@ function checkLowStock(stock){
         }
     }
 }
+//Calculates the entire inventory value based on quantity and price of each product in the array
+function calculateInventoryValue(inventory){
+    let value = 0;
+    for (let i = 0; i < inventory.length; i++){
+        value = value + (inventory[i].price * inventory[i].quantity);
+    }
+console.log(value);
+
+}
 
 //creates the variable GPU to pull from the array
 GPU = inventory[0];
