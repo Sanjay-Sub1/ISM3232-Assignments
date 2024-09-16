@@ -79,6 +79,21 @@ function calculateInventoryValue(inventory){
 console.log(value);
 
 }
+//Used to update the inventory value of a product after a sale
+function processSale(productName,quantitySold){
+//Looks up the product name to see if it is in the array
+    const item = inventory.find(product => product.name == productName);
+    {
+        if (item){
+//Calls back the function updateStock in order to update the quantity of the selected sold item
+            updateStock(item,quantitySold);
+        }
+        else{
+//Prints out the message of product name not found if the product doesnt exist in the array
+            console.log(`${productName} not found`);
+        }
+    }
+}
 
 //creates the variable GPU to pull from the array
 GPU = inventory[0];
